@@ -93,15 +93,18 @@ def mst_to_adjacency_matrix(mst, num_nodes):
     )
 
     # Write the formatted matrix to a file
-    with open("outputKruskal.txt", "w") as file:
+    with open("outputKruskal.txt", "w") as file: #OUTPUT FILE NAME FIXED
         file.write(formatted_matrix)
 
 ###################################################################################################
 
-matrix = read_matrix("example-adjacency-matrix.txt") #read adjacency matrix from txt file
+input_matrix_name = input("Enter file name of matrix: ")
+matrix = read_matrix(input_matrix_name) #read adjacency matrix from txt file
 
 edges, num_nodes = graph_from_matrix(matrix) # generate graph
 
 mst, mst_weight = kruskal_mst(num_nodes, edges) #generate mst
 
 mst_to_adjacency_matrix(mst, num_nodes) #generate output
+
+print("MST adjacency matrix saved to outputKruskal.txt")
