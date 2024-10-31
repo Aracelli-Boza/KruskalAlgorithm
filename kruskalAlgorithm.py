@@ -1,6 +1,6 @@
 """
 Initialization of repo
-@description:
+@description: Implementation of kruskal algorithm for MST
 @authors: Aracelli Melissa Boza Zabarburú A01662934, Adolfo Hernández Fernández A01664412, Luis Enrique Salazar Pérez A00833460
 @date: 31 / 10 / 2024
 """
